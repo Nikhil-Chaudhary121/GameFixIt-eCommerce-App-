@@ -1,7 +1,8 @@
 import React from "react";
-import { View, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity, Platform, StatusBar } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Slot, router, usePathname } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const _layout = () => {
   const pathname = usePathname();
@@ -12,11 +13,16 @@ const _layout = () => {
 
   // Screens where the bottom tab should be hidden
   const hideTabs = ["/order-success", "/checkout", "/login"];
-
   const shouldShowTabs = !hideTabs.includes(pathname);
 
   return (
-    <View className="flex-1 bg-white">
+    <SafeAreaView
+      style={{
+        flex: 1,
+        backgroundColor: "white",
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+      }}
+    >
       {/* Page Content */}
       <Slot />
 
@@ -40,7 +46,7 @@ const _layout = () => {
           </TouchableOpacity>
         </View>
       )}
-    </View>
+    </SafeAreaView>
   );
 };
 

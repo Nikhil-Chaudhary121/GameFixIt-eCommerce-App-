@@ -4,7 +4,7 @@ import { SafeAreaView, View, Text, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
 
-const Notification = ({ navigation }) => {
+const Notification = ({  }) => {
   return (
     <SafeAreaView className="flex-1 bg-white">
       {/* Header */}

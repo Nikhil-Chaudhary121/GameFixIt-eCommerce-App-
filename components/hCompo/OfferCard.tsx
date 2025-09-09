@@ -27,7 +27,7 @@ export const OfferCard: React.FC<Props> = React.memo(({ item, index }) => {
         <Image source={item.image} style={{ width: "90%", height: "90%" }} contentFit="contain" />
       </View>
       <View className={cn("flex-1 justify-center px-5", isEven ? "items-start" : "items-end")}>
-        <Text className="text-2xl font-bold text-white leading-snug">{item.title}</Text>
+        <Text className=" font-righteous text-2xl font-bold text-white leading-snug">{item.title}</Text>
         <Image source={images.arrowRight} style={{ width: 48, height: 48, marginTop: 8 }} contentFit="contain" />
       </View>
     </TouchableOpacity>

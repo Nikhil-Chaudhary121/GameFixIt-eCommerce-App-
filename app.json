@@ -1,11 +1,11 @@
 {
   "expo": {
-    "scheme": "my-expo-app",
-    "name": "my-expo-app",
-    "slug": "my-expo-app",
+    "scheme": "myapp",
+    "name": "Game Fix It",
+    "slug": "gamefixit",
     "version": "1.0.0",
     "web": {
-      "favicon": "./assets/favicon.png",
+      "favicon": "./logo.jpeg",
       "bundler": "metro"
     },
     "experiments": {
@@ -16,10 +16,10 @@
       "expo-font"
     ],
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./logo.jpeg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./logo.jpeg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -31,8 +31,15 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./logo.jpeg",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.nikhilchaudhary121.gamefixit"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "0b5b0604-25e2-4573-a6b1-84552fab3667"
       }
     }
   }
