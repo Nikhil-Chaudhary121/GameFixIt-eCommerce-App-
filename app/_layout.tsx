@@ -12,7 +12,7 @@ type RootLayoutProps = {
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
-      const [fontsLoaded ,error] = useFonts({
+      const [fontsLoaded, error] = useFonts({
     "quicksand-r" :Quicksand_400Regular,
     "quicksand-m" :Quicksand_500Medium,
     "quicksand-b" :Quicksand_700Bold,

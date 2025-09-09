@@ -63,6 +63,8 @@ import uncharted4 from "../assets/uncharted4.png";
 import got from "../assets/got.png";
 import hfw from "../assets/hfw.png";
 import granTurismo from "../assets/gran-turismo.png";
+import userAvatar from '../assets/user-avtar.png'
+
 
 // ✅ Product Type
 export type Product = {
@@ -85,6 +87,162 @@ export type Category = {
   image: any;
   filterKey: string; // key to filter shopProducts
 };
+
+// constants/index.ts
+
+
+
+
+// ---------- Product Types ----------
+export type Variant = {
+  id: string;
+  name: string; // "500GB", "1TB"
+  price: number;
+};
+
+export type Item = {
+  id: string;
+  title: string;
+  description: string;
+  image: any;
+  basePrice: number;
+  variants?: Variant[];
+  category: string; // e.g. "console", "game", "accessory"
+};
+
+// ---------- Review Types ----------
+export type Review = {
+  id: string;
+  user: string;
+  avatar: any;
+  rating: number; // 1-5 stars
+  comment: string;
+  date: string;
+};
+
+// ---------- Cart Types ----------
+export type CartItem = {
+  id: string;
+  productId: string;
+  title: string;
+  image: any;
+  variant?: string;
+  quantity: number;
+  price: number;
+};
+
+// ---------- Products ----------
+export const products = [
+  {
+    id: "1",
+    title: "PlayStation 5",
+    description: "The latest Sony PlayStation 5 console with immersive gaming experience.",
+    image: ps5,
+    basePrice: 499,
+    category: "console",
+    variants: [
+      { id: "v1", name: "500GB", price: 499 },
+      { id: "v2", name: "1TB", price: 599 },
+    ],
+  },
+  {
+    id: "2",
+    title: "PlayStation 4",
+    description: "Sony PlayStation 4 Slim, great value for casual gamers.",
+    image: ps4Pro,
+    basePrice: 299,
+    category: "console",
+    variants: [
+      { id: "v1", name: "500GB", price: 299 },
+      { id: "v2", name: "1TB", price: 349 },
+    ],
+  },
+  {
+    id: "3",
+    title: "Xbox Series X",
+    description: "Microsoft Xbox Series X powerful next-gen console.",
+    image: xboxOneS,
+    basePrice: 499,
+    category: "console",
+    variants: [
+      { id: "v1", name: "1TB", price: 499 },
+    ],
+  },
+  {
+    id: "4",
+    title: "DualSense Controller",
+    description: "Wireless controller for PlayStation 5 with haptic feedback.",
+    image: ps4Controller,
+    basePrice: 69,
+    category: "accessory",
+  },
+  {
+    id: "5",
+    title: "Spider-Man: Miles Morales",
+    description: "Action-adventure game set in Marvel’s Spider-Man universe.",
+    image: got,
+    basePrice: 49,
+    category: "game",
+  },
+];
+
+// ---------- Reviews ----------
+export const reviews = [
+  {
+    id: "r1",
+    user: "John Doe",
+    avatar: userAvatar,
+    rating: 5,
+    comment: "Amazing console! The graphics are stunning and super fast load times.",
+    date: "2025-08-20",
+  },
+  {
+    id: "r2",
+    user: "Sarah Smith",
+    avatar: userAvatar,
+    rating: 4,
+    comment: "Great value for the price, but sometimes the fan is a bit noisy.",
+    date: "2025-08-18",
+  },
+  {
+    id: "r3",
+    user: "Alex Johnson",
+    avatar: userAvatar,
+    rating: 5,
+    comment: "Spider-Man game is pure fun, highly recommend with PS5!",
+    date: "2025-08-10",
+  },
+];
+
+// ---------- Cart ----------
+export const cartItems = [
+  {
+    id: "c1",
+    productId: "1",
+    title: "PlayStation 5",
+    image: ps5,
+    variant: "1TB",
+    quantity: 1,
+    price: 599,
+  },
+  {
+    id: "c2",
+    productId: "4",
+    title: "DualSense Controller",
+    image: dsController,
+    quantity: 2,
+    price: 69,
+  },
+  {
+    id: "c3",
+    productId: "5",
+    title: "Spider-Man: Miles Morales",
+    image: spidermanMiles,
+    quantity: 1,
+    price: 49,
+  },
+];
+
 
 const categoryList: Category[] = [
   {
@@ -286,6 +444,31 @@ const offers = [
 export { topSellingSlides, offers, shopProducts , categoryList};
 
 export const images = {
+    ps5,
+  ps4Pro,
+  ps3Slim,
+  xboxSx,
+  xboxOneS,
+
+  // Accessories
+  dsController,
+  ps4Controller,
+  gamingHeadset,
+  hdmi4k,
+  hdd2tb,
+  monitor,
+
+  // Games
+  gow,
+  spidermanMiles,
+  theLastOfUs2,
+  uncharted4,
+  got,
+  hfw,
+  granTurismo,
+
+  // User
+  userAvatar,
     avatar,
     avocado,
     bacon,
