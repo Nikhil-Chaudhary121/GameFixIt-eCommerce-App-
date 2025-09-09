@@ -8,14 +8,15 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { orders } from '../../constants/orders';
+import { router } from 'expo-router';
 
 const Orders = ({ navigation }: any) => {
   const handleOrderPress = (orderId: string) => {
-    navigation.navigate('OrderDetails', { orderId });
+    navigation.navigate('OrderDetails', { orderId });   
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-gray-50">
+    <SafeAreaView className="flex-1 bg-white">
       {/* Header */}
       <View className="bg-white px-4 py-4">
         <Text className="text-2xl font-bold text-black">Orders</Text>
@@ -49,12 +50,12 @@ const Orders = ({ navigation }: any) => {
       </View>
 
       {/* Orders List */}
-      <ScrollView className="flex-1 bg-gray-50 px-4 pt-4">
+      <ScrollView className="flex-1 bg-white px-4 pt-4">
         {orders.map((order, index) => (
           <TouchableOpacity
             key={order.id}
-            className="bg-white rounded-xl p-4 mb-3 shadow-sm border border-gray-100"
-            onPress={() => handleOrderPress(order.id)}
+            className="bg-[#f4f4f4] rounded-xl p-4 mb-3 shadow-sm border border-gray-100"
+            onPress={() => router.push("/order")}
           >
             <View className="flex-row items-center justify-between">
               <View className="flex-row items-center flex-1">
@@ -78,24 +79,7 @@ const Orders = ({ navigation }: any) => {
         ))}
       </ScrollView>
 
-      {/* Bottom Navigation Placeholder */}
-      <View className="bg-white border-t border-gray-200 px-4 py-2">
-        <View className="flex-row justify-around items-center py-2">
-          <View className="items-center">
-            <Ionicons name="home-outline" size={24} color="#D1D5DB" />
-          </View>
-          <View className="items-center">
-            <Ionicons name="search-outline" size={24} color="#D1D5DB" />
-          </View>
-          <View className="items-center">
-            <Ionicons name="list-outline" size={24} color="#7C3AED" />
-            <View className="w-12 h-1 bg-black rounded-full mt-1" />
-          </View>
-          <View className="items-center">
-            <Ionicons name="person-outline" size={24} color="#D1D5DB" />
-          </View>
-        </View>
-      </View>
+     
     </SafeAreaView>
   );
 };

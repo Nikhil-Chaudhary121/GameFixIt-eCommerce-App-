@@ -64,6 +64,7 @@ import got from "../assets/got.png";
 import hfw from "../assets/hfw.png";
 import granTurismo from "../assets/gran-turismo.png";
 import userAvatar from '../assets/user-avtar.png'
+import creditCard from '../assets/credit-card.png'
 
 
 // ✅ Product Type
@@ -510,5 +511,7 @@ export const images = {
     star,
     trash,
     user,
+    creditCard,
 };
+
 

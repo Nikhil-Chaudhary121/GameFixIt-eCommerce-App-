@@ -15,7 +15,7 @@ import { images } from "./index";
   {
     id: "ORD-2025-0002",
     date: "2025-09-01",
-    status: "Shipped",
+    status: "Shipped",  
     total: 329.99,
     items: [
       { id: "prod-spiderman2", title: "Spider-Man 2", image: images.spidermanMiles },
@@ -45,7 +45,7 @@ const order = {
       color: "White",
       price: 499.99,
       quantity: 1,
-      image: images.ps5,
+      image: images.ps4Pro,
     },
     {
       id: "prod-dualsense",

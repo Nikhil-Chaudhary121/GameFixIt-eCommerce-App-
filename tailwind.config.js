@@ -1,13 +1,11 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
-  darkMode: false, // 🚫 no dark theme at all
+  darkMode: false,
   content: [
     "./App/**/*.{js,ts,tsx}",
-    "./app/**/*.{js,ts,tsx ,jsx}",
-    "./app.{js,ts,tsx ,jsx}",
+    "./app/**/*.{js,ts,tsx,jsx}",
+    "./app.{js,ts,tsx,jsx}",
     "./components/**/*.{js,ts,tsx}",
-    "./components/**/*.{js,ts,tsx}",
-    "./components.{js,ts,tsx}",
   ],
   presets: [require("nativewind/preset")],
   theme: {
@@ -17,10 +15,10 @@ module.exports = {
         white: {
           DEFAULT: "#ffffff",
           100: "#fafafa",
-          200: "#f5f5f5", // softer white shade
+          200: "#f5f5f5",
         },
         orange: {
-          200: "#FE8C00", // separate from white
+          200: "#FE8C00",
         },
         dark: {
           100: "#1D182A",
@@ -29,17 +27,26 @@ module.exports = {
         success: "#2F9B65",
       },
       fontFamily: {
-        "quicksand": ["quicksand-r", "sans-serif"],
+        // ✅ Quicksand
+        quicksand: ["quicksand-r", "sans-serif"],
         "quicksand-medium": ["quicksand-m", "sans-serif"],
         "quicksand-bold": ["quicksand-b", "sans-serif"],
-        "quicksand-semibold": ["Quicksand-SemiBold", "sans-serif"],
-        "quicksand-light": ["Quicksand-Light", "sans-serif"],
-        "quicksand-medium": ["Quicksand-Medium", "sans-serif"],
+
+        // ✅ Nunito
+        nunito: ["nunito-r", "sans-serif"],
+        "nunito-semibold": ["nunito-sb", "sans-serif"],
+        "nunito-bold": ["nunito-b", "sans-serif"],
+
+        // ✅ Righteous
+        righteous: ["righteous", "sans-serif"],
+
+        // ✅ Jaro
+        jaro: ["jaro", "sans-serif"],
       },
       fontSize: {
         "3xl": 30,
         "4xl": 36,
-        "5xl": 42, // ✅ now usable with text-5xl
+        "5xl": 42,
       },
     },
   },

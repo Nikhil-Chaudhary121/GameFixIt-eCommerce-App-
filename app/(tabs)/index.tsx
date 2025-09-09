@@ -6,14 +6,16 @@ import cn from 'clsx';
 // import CartButton from "@/components/CartButton";
 import { images, offers} from "../../constants/index";
 import CartButton from "components/CartButton";
+import { Redirect } from "expo-router";
 
 const Index = () => {
-
- 
-
+  
+  
+  
   console.log( offers)
   return (    
     <SafeAreaView className="flex-1 bg-white">
+      <Redirect href={"/home"} />
           <FlatList
               data={offers}
               renderItem={({ item, index }) => {

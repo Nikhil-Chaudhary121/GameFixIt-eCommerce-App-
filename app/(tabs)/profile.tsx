@@ -8,6 +8,7 @@ import {
   Image,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { images } from '../../constants';
 
 const Profile = ({ navigation }: any) => {
   const profileImage = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face';
@@ -59,17 +60,17 @@ const Profile = ({ navigation }: any) => {
         {/* Profile Section */}
         <View className="bg-white mx-4 mt-6 rounded-2xl p-6 items-center">
           {/* Profile Image */}
-          <View className="w-20 h-20 rounded-full overflow-hidden mb-4">
+          <View className="w-20 h-20 flex justify-center items-center mb-4">
             <Image
-              source={{ uri: profileImage }}
-              className="w-full h-full"
+              source={images.userAvatar}
+              className="max-w-[60%] max-h-[60%]"
               resizeMode="cover"
             />
           </View>
 
           {/* User Info */}
-          <Text className="text-xl font-bold text-black mb-1">Gilbert Jones</Text>
-          <Text className="text-sm text-gray-500 mb-1">GilbertJones00@gmail.com</Text>
+          <Text className="text-xl font-bold text-black mb-1">Nikhil Chaudhary</Text>
+          <Text className="text-sm text-gray-500 mb-1">Nikhil@gmail.com</Text>
           <Text className="text-sm text-gray-500 mb-4">+91 234-7890</Text>
 
           {/* Edit Button */}
