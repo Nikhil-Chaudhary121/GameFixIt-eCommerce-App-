@@ -5,7 +5,7 @@
       "slug": "gamefixit",
       "version": "1.0.0",
       "web": {
-        "favicon": "./assets/image/favicon.png",
+        "favicon": "./assets/images/favicon.png",
         "bundler": "metro"
       },
       "experiments": {
@@ -16,10 +16,10 @@
         "expo-font"
       ],
       "orientation": "portrait",
-      "icon": "./assets/image/.png",
+      "icon": "./assets/images/.png",
       "userInterfaceStyle": "light",
       "splash": {
-        "image": "./assets/image/splash.png",
+        "image": "./assets/images/splash.png",
         "resizeMode": "contain",
         "backgroundColor": "#ffffff"
       },
@@ -29,7 +29,7 @@
       },
       "android": {
         "adaptiveIcon": {
-          "foregroundImage": "./assets/image/adaptive-icon.png",
+          "foregroundImage": "./assets/images/adaptive-icon.png",
           "backgroundColor": "#ffffff"
         },
         "package": "com.nikhilchaudhary121.gamefixit"
